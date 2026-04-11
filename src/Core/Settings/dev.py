@@ -11,5 +11,6 @@ THIRD_PARTY_APPS = [
 ]
 
 INSTALLED_APPS += LOCAL_APPS + THIRD_PARTY_APPS
+print("In Dev Settings")
 
 

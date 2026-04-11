@@ -19,12 +19,15 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.generic.base import RedirectView
 from django.templatetags.static import static
-from Utility.utils import index
+from django.conf import settings
+from Common.api import index
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path("", index),
     re_path(r"^api/auth/", include("Auth.urls")),
     path('favicon.ico', RedirectView.as_view(url=static('common/images/favicon.ico'))),
 ]
+
+if settings.DEBUG:
+    urlpatterns += ()

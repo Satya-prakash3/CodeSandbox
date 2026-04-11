@@ -62,13 +62,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = "Core.urls"
 
-# Templates
-COMMON_TEMPLATE = os.path.join(BASE_DIR, "CommonTemplates")
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [COMMON_TEMPLATE],
+        "DIRS": [
+            BASE_DIR.joinpath("Common/Templates"),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

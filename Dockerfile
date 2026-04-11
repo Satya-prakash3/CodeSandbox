@@ -44,4 +44,4 @@ USER $USER
 
 EXPOSE 8000
 
-CMD ["gunicorn", "Core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4" , "--reload"]
+CMD ["gunicorn", "Core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4" ]
