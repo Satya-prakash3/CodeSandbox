@@ -1,0 +1,20 @@
+[project]
+name = "codesandbox"
+version = "0.1.0"
+description = "A secure code execution platform that safely runs untrusted code in isolated containers with strict resource and security controls."
+author = "Satyaprakash Sethy <satyaprakashsethy905@gmail.com>"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.0.3",
+    "django-environ>=0.13.0",
+    "gunicorn>=25.3.0",
+    "psycopg2-binary>=2.9.11",
+    "whitenoise>=6.12.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.15.7",
+]
