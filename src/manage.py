@@ -3,17 +3,10 @@
 
 import os
 import sys
-from Core.Settings.base import DEBUG
-
 
 
 def main():
     """Run administrative tasks."""
-    
-    # if DEBUG:
-    #     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Core.Settings.dev")
-    # else:
-    #     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Core.Settings.prod")
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", os.getenv('DJANGO_SETTINGS_MODULE', default="Core.Settings.dev"))
 
     try:
