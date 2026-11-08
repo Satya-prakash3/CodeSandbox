@@ -17,6 +17,7 @@ collectstatic: ## Collect static files (Docker)
 clean: ## Remove stopped containers
 clean-all: ## Remove images
 remove-backend: ## Remove backend image
+run-frontend: ## Run frontend
 
 help:
 	@echo "Usage: make <target>"
@@ -44,6 +45,9 @@ run:
 	@cp $(LOCAL_ENF_FILE) .env
 	@python src/manage.py runserver 0.0.0.0:8000
 
+run-frontend:
+	@cd frontend && npm run dev
+
 logs:
 	docker compose logs -f $(SERVICE)
 
@@ -62,7 +66,6 @@ superuser:
 collectstatic:
 	docker compose exec $(SERVICE) python manage.py collectstatic --noinput
 
-
 clean:
 	@echo "Cleaning Docker..."
 	@docker container prune -f
@@ -72,6 +75,7 @@ clean-all:
 
 remove-backend:
 	@docker rmi codesandbox-backend:latest || true
+
 
 .DEFAULT_GOAL := help
 

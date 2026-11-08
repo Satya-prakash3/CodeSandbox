@@ -5,12 +5,11 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", default="*").split(",")
 
 
 # Application definition
-LOCAL_APPS = []
+LOCAL_APPS = ['Common']
 
 THIRD_PARTY_APPS = [
 ]
 
 INSTALLED_APPS += LOCAL_APPS + THIRD_PARTY_APPS
-print("In Dev Settings")
 
 
