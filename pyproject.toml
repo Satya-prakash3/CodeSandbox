@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A secure code execution platform that safely runs untrusted code in isolated containers with strict resource and security controls."
 author = "Satyaprakash Sethy <satyaprakashsethy905@gmail.com>"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "django>=6.0.3",
     "django-environ>=0.13.0",

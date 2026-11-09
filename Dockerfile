@@ -1,5 +1,5 @@
 # First we will pull a OS that will hold and run our application
-FROM python:3.14.3-slim-bookworm
+FROM python:3.14.8-slim-bookworm
 
 
 # Set Environment variables
@@ -44,4 +44,4 @@ USER $USER
 
 EXPOSE 8000
 
-CMD ["gunicorn", "Core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4" ]
+CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4" ]
