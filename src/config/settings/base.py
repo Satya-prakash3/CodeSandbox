@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Local applications
     "common",
     "accounts",
+    "snippets"
 ]
 
 
