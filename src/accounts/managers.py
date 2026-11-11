@@ -1,12 +1,13 @@
 
-from django.contrib.auth.models import BaseUserManager
 from django.utils import timezone
-
+from django.core.validators import validate_email
+from django.contrib.auth.models import BaseUserManager
 
 class CustomUserManager(BaseUserManager):
 
     def get_by_natural_key(self, email):
         email = self.normalize_email(email).lower()
+        
 
         return self.get(
             **{self.model.USERNAME_FIELD: email}
@@ -17,6 +18,7 @@ class CustomUserManager(BaseUserManager):
             raise ValueError("The Email field must be set.")
 
         email = self.normalize_email(email).lower()
+        email = validate_email(email)
 
         extra_fields.setdefault("is_active", False)
 

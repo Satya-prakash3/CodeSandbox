@@ -38,7 +38,7 @@ prod:
 
 down:
 	@echo "Shutting down CodeSandbox Server."
-	@docker compose down
+	@docker compose down -v
 
 run:
 	@echo "Running Django WSGI Server..."
@@ -71,7 +71,7 @@ clean:
 	@docker container prune -f
 
 clean-all:
-	@docker rmi codesandbox-backend:latest postgres:16 redis:7 || true
+	@docker rmi codesandbox-backend:latest postgres:latest redis:latest || true
 
 remove-backend:
 	@docker rmi codesandbox-backend:latest || true

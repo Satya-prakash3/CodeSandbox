@@ -6,11 +6,13 @@ author = "Satyaprakash Sethy <satyaprakashsethy905@gmail.com>"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "celery[redis]>=5.7.0",
     "django>=6.0.3",
     "django-environ>=0.13.0",
     "djangorestframework>=3.17.1",
     "gunicorn>=25.3.0",
     "psycopg2-binary>=2.9.11",
+    "redis>=8.1.0",
     "whitenoise>=6.12.0",
 ]
 
