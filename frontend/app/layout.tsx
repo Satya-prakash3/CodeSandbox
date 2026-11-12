@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CodeSanbox",
-  description: "Code Sandbox for securely executing arbitary codes without touching the host system.",
+  title: "CodeSandbox",
+  description: "Secure code execution and analysis platform.",
   authors: [{"name": "Satyaprakash Sethy"}],
 };
 
